@@ -49,7 +49,12 @@ define network::bridge::null (
   validate_bool($stp)
 
   include 'network'
-
+  $ipaddress = ''
+  $netmask = ''
+  $gateway = ''
+  $dns1_real = ''
+  $dns2_real = ''
+  $domain = ''
   $interface = $name
 
   $onboot = $ensure ? {
